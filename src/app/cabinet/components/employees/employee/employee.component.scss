@@ -1,0 +1,60 @@
+table {
+  width: 100%;
+}
+td{
+width: 50%;
+margin-right: 150px;
+}
+.mat-elevation-z8 {
+// overflow-x: scroll;
+background-color: white;
+}
+@media only screen and (max-width: 768px) {
+.mat-elevation-z8 {
+  overflow-x: scroll;
+}
+}
+.mat-row {
+height: auto;
+}
+
+.mat-cell {
+padding: 8px 12px 8px 0;
+}
+.mat-header-cell {
+padding: 8px 12px 8px 0;
+}
+
+mat-paginator{
+width: 100%;
+}
+
+.default--input{
+  width: 40%;
+}
+
+span.actions{
+  padding-left: 5px;
+}
+
+  @media only screen and (max-width: 968px) {
+    .default--input{
+      width: 60%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .default--input{
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 460px) {
+    .default--input{
+      width: 120%;
+    }
+  }
+
+  th{
+    width: 60%;
+  }

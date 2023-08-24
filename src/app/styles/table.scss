@@ -1,0 +1,51 @@
+th{
+    background-color: #f7f7f7;
+  }
+
+  .l-2px{
+    padding-left: 2px !important;
+  }
+
+  .l-26px{
+    padding-left: 26px !important;
+  }
+
+  .mat-paginator-page-size-label{
+    display: none;
+  }
+
+  .mat-elevation-z8 .mat-select-value{
+    width: 50% !important;
+  }
+
+  td{
+    width: 20%;
+    margin-right: 150px;
+  }
+  .mat-elevation-z8 {
+    // overflow-x: scroll;
+    background-color: white;
+  }
+  @media only screen and (max-width: 768px) {
+    .mat-elevation-z8 {
+      overflow-x: scroll;
+    }
+  }
+  .mat-row {
+    height: auto;
+  }
+  
+  .mat-cell {
+    padding: 8px 12px 8px 0;
+  }
+  .mat-header-cell {
+    padding: 8px 12px 8px 0;
+  }
+  
+  mat-paginator{
+    width: 100%;
+  }
+  
+  .mat-paginator-page-size{
+    padding-top: 5px !important;
+  }

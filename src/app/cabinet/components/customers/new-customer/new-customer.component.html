@@ -1,0 +1,103 @@
+<div class="mx-5 mt-5 pb-5">
+    <mat-card class="mb-3">
+        <div class="container-fluid px-4 ">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="tc-label" *ngIf="id == undefined">
+                    Yeni Müştəri
+                </h1>
+                <h1 class="tc-label" *ngIf="id != undefined">
+                    Müştərini yenilə
+                </h1>
+            </div>
+        </div>
+        <form [formGroup]="employeeForm">
+            <div class="new-customer row">
+                <div class="col-lg-6 col-12" *ngIf="employeeForm.controls.name">
+                    <span class="form-label">Ad:</span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <input matInput formControlName="name" autocomplete="off" required>
+                    </mat-form-field>
+                    <div class="row col-12 justify-content-center"
+                        *ngIf="employeeForm.controls.name.invalid && isSubmit ">
+                        <div class="text-danger" *ngIf="employeeForm.controls.name.errors?.required">
+                            Ad boş ola bilməz.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12" *ngIf="employeeForm.controls.surname">
+                    <span class="form-label">Soyad: </span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <input matInput formControlName="surname" autocomplete="off" required>
+                    </mat-form-field>
+                    <div class="row col-12 justify-content-center"
+                        *ngIf="employeeForm.controls.surname.invalid && isSubmit">
+                        <div class="text-danger" *ngIf="employeeForm.controls.surname.errors?.required">
+                            Soyad boş ola bilməz.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12" *ngIf="employeeForm.controls.phone">
+                    <span class="form-label">Əlaqə nömrəsi:</span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <span matPrefix>+994 &nbsp;</span>
+                        <input matInput type="tel" formControlName="phone" autocomplete="off" required>
+                    </mat-form-field>
+                    <div class="row col-12 justify-content-center"
+                        *ngIf="employeeForm.controls.phone.invalid && isSubmit ">
+                        <div class="text-danger" *ngIf="employeeForm.controls.phone.errors?.required">
+                            Əlaqə nömrəsi boş ola bilməz.
+                        </div>
+                    </div>
+                    <div class="row col-12 justify-content-center"
+                        *ngIf="employeeForm.controls.phone.invalid && isSubmit ">
+                        <div class="text-danger" *ngIf="employeeForm.controls.phone.errors?.pattern">
+                            Düzgün nömrə daxil edin.
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-6 col-12" *ngIf="employeeForm.controls.gender">
+                    <span class="form-label">Cinsi</span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-select class="customer-component" formControlName="gender" placeholder="Seçin">
+                            <mat-option value="1">Kişi</mat-option>
+                            <mat-option value="0">Qadın</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div> -->
+                <!-- <div class="col-lg-6 col-12" *ngIf="employeeForm.controls.email">
+                    <span class="form-label">Email:</span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <input matInput type="email" formControlName="email">
+                    </mat-form-field>
+                    <mat-error *ngIf="employeeForm.controls.email.invalid && isSubmit">
+                        Düzgün e-mail adresi yazın.
+                    </mat-error>
+                </div> -->
+                <div class="col-lg-6 col-12" *ngIf="employeeForm.controls.address">
+                    <span class="form-label">Ünvan:</span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <input matInput formControlName="address">
+                    </mat-form-field>
+                </div>
+                <!-- <div class="col-lg-6 col-12 date" *ngIf="employeeForm.controls.birthdate">
+                    <span class="form-label">Doğum tarixi:</span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <input [matDatepicker]="picker" matInput autocomplete="off" formControlName="birthdate">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div> -->
+                <div class="col-sm-12 col-md-10 pt-3" *ngIf="employeeForm.controls.note">
+                    <span class="form-label">Qeyd:</span>
+                    <mat-form-field class=" txt" appearance="fill">
+                        <textarea formControlName="note" matInput class="text"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class=" col-12 d-flex justify-content-lg-end justify-content-center align-items-lg-end align-items-center"
+                    style="padding-bottom:10px; padding-top:10px">
+                    <button mat-button class="new-btn" (click)="save()">Yadda saxla</button>
+                </div>
+            </div>
+        </form>
+    </mat-card>
+</div>

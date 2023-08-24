@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+.logo {
+    position: absolute;
+    width: 220px;
+}
+
+.img{
+    margin: auto;
+}
+.uvb-img {
+    width: 150px;
+}
+
+.login {
+    min-height: 100vh;
+}
+
+.second-half {
+    background-color: #f0f2fa;
+}
+
+.bg-image {
+    background: linear-gradient(90deg, #00BBA0 0%,#07A294 20%, #177F8A 100%);
+    background-size: cover;
+    background-position: center center;
+}
+
+h1 {
+    font-size: 35px;
+    font-style: bold 35px Poppins;
+    line-height: 52px;
+    color: #333333;
+    font-weight: 900;
+}
+
+
+
+
+/*Input Design*/
+
+.item {
+    border-radius: 30px;
+    height: 50px;
+    font-family: "Popplins";
+    width: 100%;
+}
+
+  .far{
+    cursor: pointer;
+  }
+/* Placeholder text */
+
+.item::placeholder {
+    color: #333;
+    opacity: 0.3;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: white;
+}
+
+.fas,
+.far,
+mat-icon {
+    color: #333;
+    opacity: 0.3;
+}
+
+.box {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.box>i {
+    font-size: 20px;
+    color: #777;
+}
+
+.box>input {
+    flex: 1;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding-left: 10px;
+    background-color: white;
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+    .box>input {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 319px) {
+    .box>input {
+        font-size: 12px;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1200px) {
+    .container-xl {
+        margin: 0;
+        padding: 0;
+    }
+}
+

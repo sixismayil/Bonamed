@@ -1,0 +1,42 @@
+table {
+    width: 100%;
+  }
+td{
+  width: 20%;
+  margin-right: 150px;
+}
+.mat-elevation-z8 {
+  background-color: white;
+}
+
+span.actions{
+  padding-left: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mat-elevation-z8 {
+    overflow-x: scroll;
+  }
+}
+.mat-row {
+  height: auto;
+}
+
+.mat-cell {
+  padding: 8px 12px 8px 0;
+}
+.mat-header-cell {
+  padding: 8px 12px 8px 0;
+}
+
+mat-paginator{
+  width: 100%;
+}
+
+th{
+  width: 21%;
+}
+
+.customize{
+  min-height: 10px !important;
+}

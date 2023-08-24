@@ -1,0 +1,19 @@
+<mat-card class="mb-5">
+    <nav>
+        <div class="user-info d-flex align-items-center justify-content-end">
+            <h5 class="user-name">{{auth.getusername()}}</h5>
+            <button class="user-logo" [matMenuTriggerFor]="menu">
+                <i class="fas fa-user"></i>
+            </button>
+            <mat-menu #menu="matMenu" style="margin-top:20px" class="customize">
+                <!-- <button mat-menu-item [routerLink]="['/profile']"><i class="fa-solid fa-user"></i><span
+                        class="actions">Profil</span></button> -->
+                <button mat-menu-item *ngIf="auth.isAdmin()" [routerLink]="['/change-password']"><i
+                        class="fa-solid fa-pen-to-square"></i><span class="actions">Şifrənin
+                        dəyişdirilməsi</span></button>
+                <button mat-menu-item (click)="auth.signOut()"><i class="fa-solid fa-right-from-bracket"></i><span
+                        class="actions">Çıxış</span></button>
+            </mat-menu>
+        </div>
+    </nav>
+</mat-card>

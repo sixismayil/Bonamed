@@ -1,0 +1,69 @@
+<div class="mx-5 mt-5 pb-5">
+    <mat-card class="mb-3">
+        <div class="container-fluid px-4 ">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="tc-label" *ngIf="id == undefined">
+                    Yeni İstifadəçi
+                </h1>
+                <h1 class="tc-label" *ngIf="id != undefined">
+                    İstifadəçini yenilə
+                </h1>
+            </div>
+        </div>
+        <form [formGroup]="employeeForm" *ngIf="employeeForm">
+            <div class="new-customer row d-block">
+                <div class="col-lg-7 col-12" *ngIf="employeeForm.controls.username">
+                    <span class="form-label">İstifadəçi adı:</span>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <input name="user-username" matInput type="email" formControlName="username">
+                    </mat-form-field>
+                    <mat-error *ngIf="employeeForm.controls.username.errors?.required && isSubmit">
+                        İstifadəçi adını daxil edin.
+                    </mat-error>
+                    <mat-error *ngIf="employeeForm.controls.username.errors?.email && isSubmit">
+                        Düzgün istifadəçi adını daxil edin.
+                    </mat-error>
+                </div>
+                <div class="col-lg-7 col-12" *ngIf="employeeForm.controls.password">
+                    <span class="form-label">Şifrə:</span>
+                    <mat-form-field class="example-full-width password-input" appearance="fill">
+                        <input [type]="fieldTextType ? 'text' : 'password'" matInput formControlName="password"
+                            autocomplete="off" required>
+                        <i class="far fa-eye eye-show" [ngClass]="{
+                            'fa-eye-slash': !fieldTextType,
+                            'fa-eye': fieldTextType
+                          }" (click)="toggleFieldTextType()"></i>
+                    </mat-form-field>
+                    <div class="row col-12 justify-content-center">
+                        <div class="text-danger" *ngIf="employeeForm.controls.password.errors?.required && isSubmit">
+                            Şifrə boş ola bilməz.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12" *ngIf="employeeForm.controls.repassword">
+                    <span class="form-label">Şifrəni təkrar yazın:</span>
+                    <mat-form-field class="example-full-width password-input" appearance="fill">
+                        <input [type]="repeatFieldTextType ? 'text' : 'password'" matInput formControlName="repassword"
+                            autocomplete="off" required>
+                        <i class="far fa-eye eye-show" [ngClass]="{
+                            'fa-eye-slash': !repeatFieldTextType,
+                            'fa-eye': repeatFieldTextType
+                          }" (click)="toggleRepeatFieldTextType()"></i>
+                    </mat-form-field>
+                    <div class="row col-12 justify-content-center">
+                        <div class="text-danger" *ngIf="employeeForm.controls.repassword.errors?.required && isSubmit">
+                            Şifrənin təkrarı boş ola bilməz.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12 mt-2 ml-1" *ngIf="employeeForm.controls.isAdmin">
+                    <mat-checkbox class="example-margin" formControlName="isAdmin">Admin xüsusiyyəti</mat-checkbox>
+                </div>
+                <div class=" col-12 d-flex justify-content-lg-end justify-content-center align-items-lg-end align-items-center"
+                    style="padding-bottom:10px; padding-top:10px">
+                    <button mat-button class="new-btn" (click)="save()">Yadda saxla</button>
+                </div>
+            </div>
+        </form>
+    </mat-card>
+</div>

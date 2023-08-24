@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Roboto", "Helvetica Neue", sans-serif; }
+
+@import "./app/styles/button.scss";
+@import "./app/styles/table.scss";
+@import "./app/styles/fonts.scss";
+@import url("app/styles/atomic.scss");
+@import url("app/styles/fonts.scss");
+
+//Input background autocompleteinput:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #000 !important;
+}
+.cdk-text-field-autofill-monitored:-webkit-autofill{
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #000 !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+//action-box
+.mat-menu-content:not(:empty) {
+    padding: 0px !important;
+}
+
+//mat-dialog
+mat-dialog-container.mat-dialog-container {
+    border-radius: 30px !important;
+}
+
+//input onclick border
+input[type="text"], input[type="password"], textarea, select { 
+    outline: none;
+}
+
+//Mat-Form fields
+div.customer-filter-pane mat-form-field,
+div.new-customer mat-form-field{
+    padding: 10px 0 !important;
+} 
+
+div.customer-filter-pane div.mat-form-field-flex,
+div.new-customer div.mat-form-field-flex,
+div.new-position div.mat-form-field-flex,
+div.new-vacation-reason div.mat-form-field-flex,
+div.new-project-status div.mat-form-field-flex,
+div.new-project-filter-pane div.mat-form-field-flex {
+    padding: 0 !important;
+    border-radius: 30px !important;
+    border: 1px solid #cdd6e2;
+    background-color: white !important;
+}
+
+div.new-customer div.mat-form-field-flex,
+div.new-position div.mat-form-field-flex,
+div.new-vacation-reason div.mat-form-field-flex,
+div.new-project-status div.mat-form-field-flex,
+div.new-project div.mat-form-field-flex {
+    padding: 0 15px !important;
+}
+
+div.new-customer span.mat-button-focus-overlay,
+div.new-position span.mat-button-focus-overlay,
+div.new-vacation-reason span.mat-button-focus-overlay,
+div.new-project-status span.mat-button-focus-overlay,
+div.new-project span.mat-button-focus-overlay {
+    background-color: white !important;
+}
+
+div.mat-form-field-underline {
+    display: none;
+}
+
+div.mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+div.mat-form-field-infix {
+    padding-top: 0 !important;
+}
+mat-select.customer-component div.mat-select-arrow-wrapper {
+    vertical-align: bottom;
+}
+.cdk-overlay-container .cdk-global-overlay-wrapper {
+    pointer-events: auto;
+    overflow: auto;
+    background-color: rgba($color: transparent, $alpha: 0.4);
+  }
+  
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #177F8A;
+}

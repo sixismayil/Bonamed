@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex bg-image">
+            <div class="header-logo py-3 px-3">
+                <a href="https://bonamed.az/" target="_blank">
+                    <img src="./../../../assets/images/logo.svg" alt="Bonamed logo" class="logo" />
+                </a>
+            </div>
+            <div class="img">
+                <img src="./../../../assets/images/U96A5873.png" alt="Bonamed logo" class="uvb-img" />
+            </div>
+        </div>
+        <!-- The second half -->
+        <div class="col-md-6 second-half">
+            <div class="login d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-xl-8 mx-auto">
+                            <form class="container-xl" [formGroup]="loginForm">
+                                <h1 class="display-1 text-center">Giriş</h1>
+                                <div class="box mb-3" *ngIf="loginForm.controls.email">
+                                    <i class="far fa-envelope"></i>
+                                    <input matInput type="text" class="item" placeholder="İstifadəçi adı"
+                                        autocomplete="off" autocomplete="autocomplete_off_randString"
+                                        formControlName="email">
+                                </div>
+                                <div class="row col-12 justify-content-center"
+                                    [ngStyle]="{'margin-top': '-5px','margin-bottom': '10px'}"
+                                    *ngIf="loginForm.controls.email.invalid &&  isSubmit">
+                                    <div class="text-danger" *ngIf="loginForm.controls.email.errors">
+                                        İstifadəçi adını daxil edin.
+                                    </div>
+                                </div>
+                                <div class="box mb-3" *ngIf="loginForm.controls.password">
+                                    <i class="fas fa-lock" aria-hidden="true"></i>
+                                    <input [type]="showPassword ? 'text' : 'password'" class="item" placeholder="Şifrə"
+                                        formControlName="password">
+                                    <div>
+                                        <i alt="show" class="far fa-eye-slash eye-hide"
+                                            (click)="showPassword = !showPassword" [class.hide]="showPassword"></i>
+                                        <i alt="hide" class="far fa-eye eye-show" (click)="showPassword = !showPassword"
+                                            [class.hide]="!showPassword"></i>
+                                    </div>
+                                </div>
+                                <div class="row col-12 justify-content-center"
+                                  
+                                    *ngIf="loginForm.controls.password.invalid && isSubmit">
+                                    <div class="text-danger" *ngIf="loginForm.controls.password.errors">
+                                        Şifrəni daxil edin.
+                                    </div>
+                                </div>
+                                <!-- {{errorMessage}} -->
+                                <div class="mb-3">
+                                    <button mat-button class="custom-btn item" (click)="Login()">Daxil ol</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Second Half-->
+    </div>
+</div>

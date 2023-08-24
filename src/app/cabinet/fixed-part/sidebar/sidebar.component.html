@@ -1,0 +1,30 @@
+<aside id="sidebar" class="text-white text-nowrap">
+    <!-- Header -->
+    <mat-list role="list" class="pt-3">
+        <mat-list-item>
+            <a href="https://bonamed.az/" target="_blank" class="d-flex align-items-center">
+                <img src="./../../../assets/images/logo.svg" alt="Bonamed logo" class="logo" width="140px" />
+            </a>
+        </mat-list-item>
+    </mat-list>
+    <hr style="width: 90%; margin: 20px auto;">
+    <!-- Müştərilər -->
+    <mat-list>
+        <mat-list-item>
+            <a class="text-white" [routerLink]="['/customers']" routerLinkActive="router-link-active">
+                <i class="fas fa-briefcase"></i>
+                <span class="font">Müştərilər</span>
+            </a>
+        </mat-list-item>
+    </mat-list>
+    <!-- İşçilər -->
+    <mat-list>
+        <mat-list-item>
+            <a class="text-white  " *ngIf="auth.isAdmin()" [routerLink]="['/employees']"
+                routerLinkActive="router-link-active">
+                <i class="fas fa-user"></i>
+                <span class="font">İstifadəçilər</span>
+            </a>
+        </mat-list-item>
+    </mat-list>
+</aside>

@@ -1,0 +1,50 @@
+span.form-label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+mat-form-field {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.mat-icon-button.mat-primary {
+    color: #e91717 !important;
+}
+
+div.new-customer {
+    background-color: white;
+    border-radius: 30px;
+}
+
+div.new-customer>div {
+    padding: 0 30px;
+}
+
+.date .mat-form-field {
+    line-height: 0 ;
+}
+
+@media only screen and (min-width: 992px) {
+    div.new-customer  {
+    width: 700px;
+}
+}
+
+//Textarea
+.text{
+    width: 852px;
+    height: 100px;
+}
+    
+.txt{
+    border-radius: 8px;
+    width: 100%;
+}
+    
+textarea { 
+    resize:none !important; 
+}

@@ -1,0 +1,18 @@
+<mat-sidenav-container fullscreen class="main_part">
+    <mat-sidenav #sidenav mode="side" class="example-sidenav fullscreen_body" [ngStyle]="{ 'width': sidenavWidth + '%'}"
+        opened="true">
+        <!-- <span class="menu-icon" (click)="sideToggle()">
+            <i class="fas fa-chevron-circle-right"></i>
+            <i class="fas fa-chevron-circle-left"></i>
+        </span> -->
+        <app-sidebar [sidenavWidth]="sidenavWidth"></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content [style]="testWidth" class="margin_wholebody">
+        <div>
+            <app-header></app-header>
+            <app-sidebar [sidenavWidth]="50" class="responsive_body"></app-sidebar>
+            <router-outlet></router-outlet>
+            <app-footer></app-footer>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

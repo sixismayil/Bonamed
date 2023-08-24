@@ -1,0 +1,12 @@
+@media screen and (max-width: 505px) {
+    mat-dialog-actions{
+        display: flex;
+        justify-content: center;
+        .mr-4{
+            margin-right: 0 !important;
+        }
+        .mat-button-base{
+            margin-left: 0 !important;
+        }
+    }
+}

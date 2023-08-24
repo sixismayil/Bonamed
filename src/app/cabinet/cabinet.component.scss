@@ -1,0 +1,117 @@
+mat-sidenav {
+    transition: width 0.5s;
+    background: linear-gradient(90deg, #00BBA0 0%,#07A294 20%, #177F8A 100%);   
+    overflow-y: hidden !important;
+}
+
+mat-sidenav mat-icon,
+mat-sidenav h5 {
+    color: #FFFFFF;
+}
+
+mat-sidenav-content {
+    transition: margin-left 0.5s;
+}
+
+.menu-icon {
+    position: absolute;
+    right: 22px;
+    top: 90vh;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 28px;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fa-chevron-circle-left {
+    display: none;
+}
+
+div.mat-drawer-inner-container {
+    overflow-y: hidden !important;
+}
+
+mat-panel-title {
+    padding: 10px 0 10px 10px;
+}
+
+.main_part {
+    background-color: #f8f8f8!important;
+}
+
+div.mat-drawer-inner-container {
+    overflow-x: hidden;
+}
+
+@media screen and (min-width: 992px) {
+    .fullscreen_body {
+        display: block!important;
+    }
+    .responsive_body {
+        display: none!important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .fullscreen_body {
+        display: none!important;
+    }
+    .responsive_body {
+        display: block!important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #sidebar{
+        background: linear-gradient(90deg, #00BBA0 0%,#07A294 20%, #177F8A 100%);   
+    }
+}
+
+a.router-link-active {
+    text-decoration: underline !important;
+}
+
+
+.responsive_body a.router-link-active {
+    width: 100%;
+    // padding: 10px 0 10px 10px;
+    // background: #09B879;
+    border-radius: 20px 0 0 20px;
+    position: relative;
+}
+
+// .responsive_body a.router-link-active::after {
+//     content: "";
+//     border: 2px solid #FFFFFF;
+//     border-radius: 5px;
+//     background-color: white;
+//     height: 100%;
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+// }
+
+mat-sidenav-content>div:first-child {
+    min-height: 100%;
+    position: relative;
+}
+
+app-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#cdk-overlay-0 {
+    margin-top: 12px;
+    margin-right: 15px;
+}
+
+app-change-password div.mat-form-field-suffix,
+app-profile div.mat-form-field-suffix {
+    align-self: center;
+}

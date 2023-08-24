@@ -1,0 +1,20 @@
+<div class="mx-5 mt-5 pb-5">
+    <mat-card class="mb-3">
+        <div class="container ">
+            <div class="row" *ngIf="customer">
+                <div class="col-md-12">
+                    <h1 class="tc-label">Müştərinin ətraflı məlumatları</h1>
+                </div>
+                <div class="col-md-6 pt-2 mt-1">
+                    <p><b>Müştəri:</b> {{customer.name}} {{customer.surname}}</p>
+                    <p><b>Müştərinin əlaqə nömrəsi:</b> +994 {{customer.phone}}</p>
+                    <p><b>Müştərinin ünvanı:</b> {{customer.address}}</p>
+                    <p><b>Müştərinin əlavə edilmə tarixi:</b> {{customer.createDate?.seconds*1000 | date:'dd.MM.yyyy'}}</p>
+                </div>
+                <div class="col-md-12">
+                    <p class=" border-0"><b>Qeyd:</b> {{customer.note}}</p>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>
